@@ -33,6 +33,7 @@
     "@intlify/vue-i18n-loader": "^2.1.0",
     "@types/luxon": "catalog:",
     "@types/qs": "^6.15.0",
+    "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "~5.26.0",
     "@typescript-eslint/parser": "~5.26.0",
     "@vue/eslint-config-typescript": "^9.1.0",
