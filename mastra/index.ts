@@ -213,6 +213,7 @@ export const mastra = new Mastra({
   },
   server: {
     port: Number(readEnv("VITE_MASTRA_PORT") || 4111),
+    host: readEnv("VITE_MASTRA_HOST") || readEnv("MASTRA_HOST") || "0.0.0.0",
     cors: {
       origin: readEnv("VITE_MASTRA_ALLOWED_ORIGIN") || "*",
       allowMethods: ["GET", "POST", "OPTIONS"],
