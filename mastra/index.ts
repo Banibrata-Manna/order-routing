@@ -215,7 +215,7 @@ export const mastra = new Mastra({
     port: Number(readEnv("VITE_MASTRA_PORT") || 4111),
     host: readEnv("VITE_MASTRA_HOST") || readEnv("MASTRA_HOST") || "0.0.0.0",
     cors: {
-      origin: readEnv("VITE_MASTRA_ALLOWED_ORIGIN") || "*",
+      origin: "*",
       allowMethods: ["GET", "POST", "OPTIONS"],
       allowHeaders: ["Content-Type", "Authorization"]
     },
