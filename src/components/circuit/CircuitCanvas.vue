@@ -1623,11 +1623,11 @@ async function openArchivedRuleModal() {
 
 
 async function save() {
-  emitter.emit("presentLoader", { message: "Updating inventory rules and filters", backdropDismiss: false })
+  // emitter.emit("presentLoader", { message: "Updating inventory rules and filters", backdropDismiss: false })
   syncActiveRuleDraft()
   const localRulesPersisted = await persistLocalInventoryRules()
   if(!localRulesPersisted) {
-    emitter.emit("dismissLoader")
+    // emitter.emit("dismissLoader")
     return
   }
 
@@ -1734,7 +1734,7 @@ async function save() {
   initializeInventoryRules()
 
   hasUnsavedChanges.value = false
-  emitter.emit("dismissLoader")
+  // emitter.emit("dismissLoader")
   commonUtil.showToast(translate("Changes saved successfully"))
 }
 
