@@ -6,6 +6,7 @@ import { orderRoutingStore } from './orderRoutingStore'
 import { useUtilStore } from './utilStore'
 import { productStore as useProduct } from './product'
 import { productStore } from './productStore'
+import { cookieHelper } from '@common'
 
 export const useUserStore = defineStore('user', {
   state: () => {
@@ -141,7 +142,7 @@ export const useUserStore = defineStore('user', {
     async postLogin() {
       try {
         await this.fetchUserProfile()
-        await this.setOms(commonUtil.getOmsURL())
+        await this.setOms(cookieHelper().get("oms"))
         await this.fetchPermissions()
         await productStore().fetchEComStores()
         await this.fetchAvailableTimeZones()
